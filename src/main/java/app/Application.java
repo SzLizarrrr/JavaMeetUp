@@ -1,7 +1,15 @@
 package app;
 
-/**
- * Created by szlizarrrr on 3/22/16.
- */
+import org.springframework.boot.SpringApplication;
+import org.springframework.boot.autoconfigure.SpringBootApplication;
+import org.springframework.context.annotation.ComponentScan;
+
+@ComponentScan("meetup")
+@SpringBootApplication
 public class Application {
+
+    public static void main(String[] args) {
+        SpringApplication.run(Application.class, args);
+    }
+
 }
