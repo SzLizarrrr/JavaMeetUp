@@ -24,4 +24,9 @@ public class GreetingController {
         return "about";
     }
 
+    @RequestMapping("/home")
+    public String home(){
+        return "home";
+    }
+
 }
