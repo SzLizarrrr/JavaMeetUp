@@ -14,11 +14,6 @@ public class GreetingController {
         return "greeting";
     }
 
-    @RequestMapping("/index")
-    public String meetUp(){
-        return "index";
-    }
-
     @RequestMapping("/about")
     public String about(){
         return "about";
