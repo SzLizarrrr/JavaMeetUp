@@ -1,45 +1,25 @@
 <!DOCTYPE html>
-<html lang="en">
+<html xmlns:th="http://www.thymeleaf.com"
+      lang="en">
 <head>
-	<meta charset="UTF-8"/>
-	<title>meetup</title>
-	<link rel="stylesheet" href="css/common.css"/>
-	<link rel="stylesheet" href="css/index.css"/>
-	<script src="http://code.jquery.com/jquery-migrate-1.2.1.min.js"></script>
-	<script src="http://code.jquery.com/jquery-1.12.0.min.js"></script>
-	<script type="js/jquery.anystrethc.min.js"></script>
+    <meta charset="UTF-8"/>
+    <title>meetup</title>
+    <link rel="stylesheet" href="css/common.css"/>
+    <link rel="stylesheet" href="css/home.css"/><！-- need to change -->
+    <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"></script>
+    <script type="text/javascript" src="js/jquery.anystretch.min.js"></script>
 </head>
 <body>
+<div th:replace="fragments/header :: header"/>
+<div class="container">
+    <h1>about</h1>
+</div>
+<div th:replace="fragments/footer :: footer"/>
 
-	<div class="navbar clearfix">
-		<div class="container">
-			<a class="navbar-brand" href="./index">
-				Meetup
-			</a>
-			<ul class="nav left">
-				<li><a href="./about">About</a></li>
-				<li><a href="#">placeholder</a></li>
-			</ul>
-			<ul class="nav right">
-				<li><a href="#">login</a></li>
-				<li><a href="#">signup</a></li>
-			</ul>
-		</div>
-	</div>
-	
-	<div class="container">
-		<h1>about</h1>
-	</div>
-
-	<div class="footer">
-		<div class="container">
-			footer
-		</div>
-	</div>
-
-	<script>
+<script>
 		$('.home-banner').anystretch();
-	</script>
+
+</script>
 
 </body>
 </html>
