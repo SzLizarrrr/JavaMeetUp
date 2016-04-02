@@ -6,13 +6,25 @@
     <title>MeetUp Home Page</title>
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
     <link rel="stylesheet" href="css/common.css"/>
+    <link rel="stylesheet" href="css/layout.css"/>
     <link rel="stylesheet" href="css/home.css"/>
+    <!--<link rel="stylesheet" href="less/home.less"/>-->
     <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"></script>
     <script type="text/javascript" src="js/jquery.anystretch.min.js"></script>
 </head>
 <body class="home">
 <div th:replace="fragments/header :: header"/>
-<div class="home-banner" data-stretch="images/route66.jpg"></div>
+
+<div class="home-banner" data-stretch="images/route66.jpg">
+    <div class="banner-inner container clearfix">
+        <h1>It's Party Time!</h1>
+        <p class="subheading">到时聚聚，聊聊程序</p>
+        <div class="home-banner-links">
+            <a class="banner-btn" href="#">发布新活动</a>
+        </div>
+    </div>
+</div>
+
 <div th:replace="fragments/footer :: footer"/>
 <script>
 		$('.home-banner').anystretch();

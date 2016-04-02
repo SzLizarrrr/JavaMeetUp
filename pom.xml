@@ -23,6 +23,11 @@
             <artifactId>spring-boot-devtools</artifactId>
             <optional>true</optional>
         </dependency>
+        <dependency>
+            <groupId>com.asual.lesscss</groupId>
+            <artifactId>lesscss-engine</artifactId>
+            <version>1.3.0</version>
+        </dependency>
     </dependencies>
 
     <properties>
@@ -36,6 +41,24 @@
                 <groupId>org.springframework.boot</groupId>
                 <artifactId>spring-boot-maven-plugin</artifactId>
             </plugin>
+            <!--<plugin>-->
+                <!--<groupId>com.github.warmuuh</groupId>-->
+                <!--<artifactId>libsass-maven-plugin</artifactId>-->
+                <!--<version>0.2.2-libsass_3.3.3</version>-->
+                <!--<executions>-->
+                    <!--<execution>-->
+                        <!--<phase>generate-resources</phase>-->
+                        <!--<goals>-->
+                            <!--<goal>compile</goal>-->
+                        <!--</goals>-->
+                    <!--</execution>-->
+                <!--</executions>-->
+                <!--<configuration>-->
+                    <!--<inputPath>${basedir}/src/main/resources/static/less</inputPath>-->
+                    <!--<outputPath>${basedir}/target/</outputPath>-->
+                    <!--<includePath>${basedir}/src/main/sass/plugins/</includePath>-->
+                <!--</configuration>-->
+            <!--</plugin>-->
         </plugins>
     </build>
 

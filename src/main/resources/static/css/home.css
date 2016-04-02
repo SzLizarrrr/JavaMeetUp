@@ -1,56 +1,58 @@
-.navbar {
-  background: #222;
-  position: relative;
-  z-index: 1000;
-}
-.home .navbar{
-  background: transparent;
-}
-.navbar a {
-  color: #fff;
-}
-.navbar a:hover {
-  color: #c0865e;
-}
-.navbar-brand {
-  float: left;
-  padding-left: 0;
-  line-height: 80px;
-  font-size: 40px;
-}
-.nav.left {
-  float: left;
-  margin-left: 40px;
-  font-size: 15px;
-}
-.nav.right {
-  float: right;
-}
-.nav  li {
-  float: left;
-}
-.nav  li  a {
-  display: block;
-  font-size: 1.1em;
-  line-height: 40px;
-  padding: 5px 10px;
-  margin: 15px 10px;
-}
-.nav  li  a:hover {
-  color: #000;
-  background: #fff;
-}
-
-.footer {
-  border-top: 1px solid #c5c5c5;
-  min-height: 200px;
-  margin: 3em 0;
-  padding-top: 3em;
-  padding-bottom: 3em;
-  background: #f8f5f0;
-}
-
 .home-banner {
-  height: 600px;
-  margin-top: -80px;
+margin-top: -80px;
+padding-top: 80px;
+}
+
+.home-banner .banner-inner {
+height: 600px;
+position: relative;
+}
+
+.home-banner .banner-inner h1 {
+font-family: "museo-sans-condensed";
+font-size: 88px;
+font-weight: 400;
+letter-spacing: -2px;
+border-radius: 5px;
+margin-top: 60px;
+line-height: 1.2;
+max-width: 50%;
+text-transform: capitalize;
+color: #fff;
+text-shadow: 0 1px 81px rgba(0, 0, 0, 0.3);
+}
+
+.home-banner .banner-inner .subheading {
+color: #fff;
+font-weight: 300;
+font-size: 1.3em;
+margin-top: 26px;
+background: rgba(0, 0, 0, 0.5);
+display: block;
+width: 45%;
+padding: 5px 10px;
+line-height: 30px;
+text-align: center;
+}
+
+.home-banner-links {
+position: absolute;
+right: 160px;
+top: 194px;
+}
+
+.home-banner-links .banner-btn {
+padding: 15px 15px;
+font-size: 1.2em;
+font-weight: 300;
+font-family: "museo-sans-condensed";
+border-radius: 5px;
+color: #fff;
+background: rgba(0, 0, 0, 0.1);
+margin-left: 8px;
+border: 1px solid transparent;
+}
+
+.home-banner-links .banner-btn:hover {
+border: 1px solid rgba(0, 0, 0, 0.2);
 }
