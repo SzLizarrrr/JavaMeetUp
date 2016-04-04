@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.com"
+      lang="en">
+<body>
+
+    <div class="issue-list" th:fragment="issue" th:each="issue : ${issues}">
+        <article class="issue clearfix">
+            <div class="avatar">
+                <a href="/happypeter">
+                    <img src="http://ww4.sinaimg.cn/crop.0.0.852.852.1024/64848c8bjw8ei9vx6j3wzj20no0no424.jpg"/>
+                </a>
+            </div>
+            <div class="body">
+                <h5 class="title">
+                    <a href="#" th:text="${issue.title}"/>
+                </h5>
+                <a class="read-more" href="#">read</a>
+                <span class="meta-data">
+                    <a href="/happypeter">多澄莹</a>
+                </span>
+            </div>
+            <div class="issue-comment-count">
+                <a href="/issues/8" th:text="${issue.comments}"/>
+            </div>
+        </article>
+    </div>
+
+</body>
+</html>

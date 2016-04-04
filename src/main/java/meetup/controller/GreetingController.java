@@ -14,14 +14,4 @@ public class GreetingController {
         return "greeting";
     }
 
-    @RequestMapping("/about")
-    public String about(){
-        return "about";
-    }
-
-    @RequestMapping("/home")
-    public String home(){
-        return "home";
-    }
-
 }

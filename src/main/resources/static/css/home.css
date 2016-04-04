@@ -56,3 +56,92 @@ border: 1px solid transparent;
 .home-banner-links .banner-btn:hover {
 border: 1px solid rgba(0, 0, 0, 0.2);
 }
+
+.issue-list-header {
+border-bottom: 1px solid #ddd;
+padding-bottom: 30px;
+padding-top: 30px;
+margin-top: 0;
+margin-bottom: 35px;
+background: #7EB6AD;
+color: #fff;
+}
+
+.issue-list-header .issue-list-heading {
+font-size: 2em;
+font-weight: normal;
+}
+
+.issue-list {
+background: #fff;
+clear: both;
+padding: 0 2em;
+margin-bottom: 1em;
+border: 1px solid #ddd;
+}
+
+.issue-list article {
+border-bottom: 1px solid #e3e3e3;
+position: relative;
+margin-top: 0;
+padding: 1em 0;
+}
+
+.issue-list article .body {
+margin-right: 2em;
+width: 70%;
+float: left;
+}
+
+.issue-list article .body .read-more {
+background-color: #316A72;
+color: #fff;
+font-size: 13px;
+border-radius: 4px;
+letter-spacing: -0.3px;
+display: inline-block;
+line-height: 1.7;
+font-weight: 100;
+padding: 0 6px;
+}
+
+.issue-list article .body .meta-data {
+color: #999;
+font-size: 12px;
+}
+
+.issue-list article .body h5 {
+font-size: 22px;
+line-height: 35px;
+font-weight: normal;
+margin: 0 0 5px;
+}
+
+.issue-list article .body h5 a {
+color: #555;
+}
+
+.issue-list article .body h5 a:hover {
+color: black;
+}
+
+.issue-list article .issue-comment-count {
+float: right;
+margin-top: 15px;
+}
+
+.issue-list article .issue-comment-count a {
+font-size: 45px;
+}
+
+.issue-list article .avatar {
+width: 75px;
+float: left;
+}
+
+.issue-list article .avatar img {
+width: 65px;
+padding: 4px;
+border: 1px solid #ddd;
+}
+
