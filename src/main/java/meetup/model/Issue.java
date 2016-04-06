@@ -16,7 +16,7 @@ public class Issue {
     @GeneratedValue(strategy = GenerationType.AUTO)
     private long id;
     private String title;
-    private int comments;
+    private String content;
 
     public Issue() {
     }
@@ -25,10 +25,6 @@ public class Issue {
         this.id = id;
     }
 
-    public Issue(String title, int comments) {
-        this.title = title;
-        this.comments = comments;
-    }
 
     public String getTitle() {
         return title;
@@ -38,12 +34,12 @@ public class Issue {
         this.title = title;
     }
 
-    public int getComments() {
-        return comments;
+    public String getContent() {
+        return content;
     }
 
-    public void setComments(int comments) {
-        this.comments = comments;
+    public void setContent(String content) {
+        this.content = content;
     }
 
     public long getId() {
@@ -59,7 +55,7 @@ public class Issue {
         return "Issue{" +
                 "id=" + id +
                 ", title='" + title + '\'' +
-                ", comments=" + comments +
+                ", content='" + content + '\'' +
                 '}';
     }
 }

@@ -7,6 +7,7 @@ import org.springframework.beans.factory.annotation.Qualifier;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RequestParam;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -22,18 +23,20 @@ public class PageController {
     private IssueDao issueDao;
 
     @RequestMapping("/home")
-    public String home(Model model){
+    public String homePage(Model model){
         Iterable<Issue> issues = issueDao.findAll();
-//        List<Issue> issues = new ArrayList<Issue>();
-//        for(Issue issue : issueDao.findAll()){
-//            issues.add(issue);
-//        }
         model.addAttribute("issues", issues);
         return "home";
     }
 
     @RequestMapping("/about")
-    public String about(){
+    public String aboutPage(){
         return "about";
+    }
+
+    @RequestMapping("/issue")
+    public String issuePage(@RequestParam(value = "id") long id, Model model){
+        model.addAttribute("issue", issueDao.findOne(id));
+        return "issue";
     }
 }
