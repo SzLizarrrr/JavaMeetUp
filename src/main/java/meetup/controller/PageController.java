@@ -23,10 +23,11 @@ public class PageController {
 
     @RequestMapping("/home")
     public String home(Model model){
-        List<Issue> issues = new ArrayList<Issue>();
-        for(Issue issue : issueDao.findAll()){
-            issues.add(issue);
-        }
+        Iterable<Issue> issues = issueDao.findAll();
+//        List<Issue> issues = new ArrayList<Issue>();
+//        for(Issue issue : issueDao.findAll()){
+//            issues.add(issue);
+//        }
         model.addAttribute("issues", issues);
         return "home";
     }
