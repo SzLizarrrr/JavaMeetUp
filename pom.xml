@@ -46,7 +46,6 @@
         <java.version>1.8</java.version>
     </properties>
 
-
     <build>
         <plugins>
             <plugin>
@@ -54,22 +53,24 @@
                 <artifactId>spring-boot-maven-plugin</artifactId>
             </plugin>
             <!--<plugin>-->
-            <!--<groupId>com.github.warmuuh</groupId>-->
-            <!--<artifactId>libsass-maven-plugin</artifactId>-->
-            <!--<version>0.2.2-libsass_3.3.3</version>-->
-            <!--<executions>-->
-            <!--<execution>-->
-            <!--<phase>generate-resources</phase>-->
-            <!--<goals>-->
-            <!--<goal>compile</goal>-->
-            <!--</goals>-->
-            <!--</execution>-->
-            <!--</executions>-->
-            <!--<configuration>-->
-            <!--<inputPath>${basedir}/src/main/resources/static/scss</inputPath>-->
-            <!--<outputPath>${basedir}/target/</outputPath>-->
-            <!--<includePath>${basedir}/src/main/sass/plugins/</includePath>-->
-            <!--</configuration>-->
+                <!--<groupId>com.github.warmuuh</groupId>-->
+                <!--<artifactId>libsass-maven-plugin</artifactId>-->
+                <!--<version>0.2.2-libsass_3.3.3-->
+                <!--</version>-->
+                <!--<executions>-->
+                    <!--<execution>-->
+                        <!--<phase>generate-resources</phase>-->
+                        <!--<goals>-->
+                            <!--<goal>compile</goal>-->
+                        <!--</goals>-->
+                    <!--</execution>-->
+                <!--</executions>-->
+                <!--<configuration>-->
+                    <!--<inputPath>${basedir}/src/main/resources/static/scss/</inputPath>-->
+                    <!--&lt;!&ndash;<outputPath>${basedir}/target/</outputPath>&ndash;&gt;-->
+                    <!--<outputPath>${basedir}/src/main/resources/static/css/</outputPath>-->
+                    <!--<includePath>${basedir}/src/main/resources/static/scss/plugins/</includePath>-->
+                <!--</configuration>-->
             <!--</plugin>-->
         </plugins>
     </build>
