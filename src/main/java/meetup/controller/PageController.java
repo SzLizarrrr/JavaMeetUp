@@ -53,7 +53,6 @@ public class PageController {
 
     @RequestMapping("/create")
     public String issueCreate(Issue issue){
-        System.out.println(issue.toString());
         issueDao.save(issue);
         return "redirect:/";
     }
