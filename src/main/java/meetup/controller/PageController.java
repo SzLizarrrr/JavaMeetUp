@@ -6,9 +6,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Qualifier;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
-import org.springframework.web.bind.annotation.PathVariable;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RequestParam;
+import org.springframework.web.bind.annotation.*;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -44,6 +42,19 @@ public class PageController {
     @RequestMapping("/destory")
     public String issueDestory(@RequestParam(value = "id") long id){
         issueDao.delete(id);
+        return "redirect:/";
+    }
+
+    @RequestMapping("/newissue")
+    public String issueNew(Model model){
+        model.addAttribute("issue", new Issue());
+        return "newissue";
+    }
+
+    @RequestMapping("/create")
+    public String issueCreate(Issue issue){
+        System.out.println(issue.toString());
+        issueDao.save(issue);
         return "redirect:/";
     }
 }

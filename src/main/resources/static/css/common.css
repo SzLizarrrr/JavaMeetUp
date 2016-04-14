@@ -77,3 +77,28 @@ a:hover {
   -o-user-select: none;
   user-select: none;
 }
+
+form input {
+  font-size: 21px;
+  width: 100%;
+  padding: 10px 12px;
+  color: #555;
+}
+
+form textarea {
+  height: 180px;
+  font-size: 21px;
+  width: 100%;
+  padding: 10px 12px;
+  color: #555;
+}
+
+form label {
+  display: inline-block;
+  margin-bottom: 5px;
+}
+
+form dd {
+  margin: 0;
+}
+
