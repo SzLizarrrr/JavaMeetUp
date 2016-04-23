@@ -22,38 +22,20 @@ public class PageController {
     private IssueDao issueDao;
 
     @RequestMapping("/home")
-    public String homePage(Model model){
+    public String homePage(Model model) {
         Iterable<Issue> issues = issueDao.findAll();
         model.addAttribute("issues", issues);
         return "home";
     }
 
     @RequestMapping("/about")
-    public String aboutPage(){
+    public String aboutPage() {
         return "about";
     }
 
     @RequestMapping("/issue")
-    public String issuePage(@RequestParam(value = "id") long id, Model model){
+    public String issuePage(@RequestParam(value = "id") long id, Model model) {
         model.addAttribute("issue", issueDao.findOne(id));
         return "issue";
-    }
-
-    @RequestMapping("/destory")
-    public String issueDestory(@RequestParam(value = "id") long id){
-        issueDao.delete(id);
-        return "redirect:/";
-    }
-
-    @RequestMapping("/newissue")
-    public String issueNew(Model model){
-        model.addAttribute("issue", new Issue());
-        return "newissue";
-    }
-
-    @RequestMapping("/create")
-    public String issueCreate(Issue issue){
-        issueDao.save(issue);
-        return "redirect:/";
     }
 }
