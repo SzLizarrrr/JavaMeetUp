@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.com"
+      lang="en">
+<head>
+    <meta charset="UTF-8"/>
+    <title>meetup</title>
+    <link rel="stylesheet" href="css/common.css" />
+    <link rel="stylesheet" href="css/layout.css" />
+    <link rel="stylesheet" href="css/newissue.css" />
+    <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"></script>
+</head>
+<body>
+<div th:replace="fragments/header :: header"/>
+<div class="new-issue-form-container clearfix">
+    <div class="new-issue-form clearfix">
+        <form action="#" th:action="@{/create}" th:object="${issue}" method="post">
+            <dl class="form">
+                <dt><label>Title</label></dt>
+                <dd><input type="text" th:field="*{title}"/></dd>
+            </dl>
+            <dl class="form">
+                <dt><label>Content</label></dt>
+                <dd><textarea type="text" th:field="*{content}"/></dd>
+            </dl>
+            <p><input type="submit" class="submit-issue-button btn btn-primary" name="commit" value="Create Issue"/></p>
+        </form>
+    </div>
+</div>
+<div th:replace="fragments/footer :: footer"/>
+
+</body>
+</html>

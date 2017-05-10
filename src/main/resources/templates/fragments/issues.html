@@ -3,7 +3,7 @@
       lang="en">
 <body>
 
-    <div class="issue-list" th:fragment="issue" th:each="issue : ${issues}">
+    <div class="issue-list" th:fragment="issues" th:each="issue : ${issues}">
         <article class="issue clearfix">
             <div class="avatar">
                 <a href="/happypeter">
@@ -12,7 +12,7 @@
             </div>
             <div class="body">
                 <h5 class="title">
-                    <a href="#" th:text="${issue.title}"/>
+                    <a th:href="@{/issue(id=${issue.id})}" th:text="${issue.title}"/>
                 </h5>
                 <a class="read-more" href="#">read</a>
                 <span class="meta-data">
@@ -20,7 +20,9 @@
                 </span>
             </div>
             <div class="issue-comment-count">
-                <a href="/issues/8" th:text="${issue.comments}"/>
+                <a>
+                    5
+                </a>
             </div>
         </article>
     </div>

@@ -11,6 +11,4 @@ import javax.transaction.Transactional;
 @Transactional
 public interface IssueDao extends CrudRepository<Issue, Long>{
 
-    public Issue findByTitle(String title);
-
 }
