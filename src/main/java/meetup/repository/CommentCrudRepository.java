@@ -1,4 +1,4 @@
-package meetup.dao;
+package meetup.repository;
 
 import meetup.model.Comment;
 import org.springframework.data.repository.CrudRepository;
@@ -10,5 +10,5 @@ import javax.transaction.Transactional;
  */
 
 @Transactional
-public interface CommentDao extends CrudRepository<Comment, Long>{
+public interface CommentCrudRepository extends CrudRepository<Comment, Long>{
 }
