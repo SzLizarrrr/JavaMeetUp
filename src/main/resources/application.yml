@@ -11,6 +11,7 @@ spring:
       ddl-auto: update
       naming-strategy: org.hibernate.cfg.ImprovedNamingStrategy
     show-sql: true
+    format_sql: true
     properties:
       hibernate:
         dialect: org.hibernate.dialect.MySQL5Dialect
