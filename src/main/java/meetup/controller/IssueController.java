@@ -2,11 +2,14 @@ package meetup.controller;
 
 import meetup.repository.IssueCrudRepository;
 import meetup.model.Issue;
+import meetup.service.IssueService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestParam;
+
+import javax.annotation.Resource;
 
 /**
  * Created by szlizarrrr on 4/23/16.
@@ -15,12 +18,12 @@ import org.springframework.web.bind.annotation.RequestParam;
 @Controller
 public class IssueController {
 
-    @Autowired
-    private IssueCrudRepository issueCrudRepository;
+    @Resource
+    private IssueService issueService;
 
     @RequestMapping("/destory")
     public String issueDestory(@RequestParam(value = "id") long id){
-        issueCrudRepository.delete(id);
+        issueService.delete(id);
         return "redirect:/";
     }
 
@@ -32,7 +35,7 @@ public class IssueController {
 
     @RequestMapping("/create")
     public String issueCreate(Issue issue){
-        issueCrudRepository.save(issue);
+        issueService.save(issue);
         return "redirect:/";
     }
 }
