@@ -2,6 +2,8 @@ package meetup.controller;
 
 import meetup.domain.Issue;
 import meetup.service.IssueService;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.*;
@@ -14,6 +16,8 @@ import javax.annotation.Resource;
 
 @Controller
 public class PageController {
+
+    private static Logger log = LoggerFactory.getLogger(PageController.class);
 
     @Resource
     private IssueService issueService;
