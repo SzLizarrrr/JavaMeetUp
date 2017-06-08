@@ -24,6 +24,7 @@ public class PageController {
 
     @RequestMapping("/home")
     public String homePage(Model model) {
+        log.debug("读取首页");
         Iterable<Issue> issues = issueService.findAll();
         model.addAttribute("issues", issues);
         return "home";

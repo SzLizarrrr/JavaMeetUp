@@ -8,5 +8,4 @@ import org.springframework.data.repository.CrudRepository;
  */
 
 public interface IssueCrudRepository extends CrudRepository<Issue, Long>{
-
 }
