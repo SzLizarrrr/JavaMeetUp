@@ -1,18 +1,13 @@
 spring:
+  profiles:
+    active: winlab
   datasource:
-#    url: jdbc:mysql://localhost:3306/meetup_test?characterEncoding=UTF-8
-#    username: root
-#    password: root
-    url: jdbc:mysql://192.168.33.10:3306/meetup_test?characterEncoding=UTF-8
-    username: vagrant
-    password: $Adm1nVagrant
     driver-class-name: com.mysql.jdbc.Driver
     test-while-idle: true
     validation-query: SELECT 1
   jpa:
     hibernate:
       ddl-auto: update
-      naming-strategy: org.hibernate.cfg.ImprovedNamingStrategy
     show-sql: true
     properties:
       hibernate:
