@@ -1,9 +1,7 @@
 package meetup.repository;
 
-import meetup.model.Comment;
+import meetup.domain.Comment;
 import org.springframework.data.repository.CrudRepository;
-
-import javax.transaction.Transactional;
 
 /**
  * Created by szlizarrrr on 4/23/16.

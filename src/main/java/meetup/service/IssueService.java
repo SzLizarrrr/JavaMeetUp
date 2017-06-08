@@ -1,6 +1,6 @@
 package meetup.service;
 
-import meetup.model.Issue;
+import meetup.domain.Issue;
 import meetup.repository.IssueCrudRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;

@@ -1,8 +1,6 @@
-package meetup.model;
+package meetup.domain;
 
 import javax.persistence.*;
-import java.util.ArrayList;
-import java.util.List;
 
 /**
  * Created by szlizarrrr on 4/2/16.

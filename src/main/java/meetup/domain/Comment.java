@@ -1,4 +1,4 @@
-package meetup.model;
+package meetup.domain;
 
 import javax.persistence.*;
 

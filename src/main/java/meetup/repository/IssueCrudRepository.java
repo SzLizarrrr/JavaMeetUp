@@ -1,9 +1,7 @@
 package meetup.repository;
 
-import meetup.model.Issue;
+import meetup.domain.Issue;
 import org.springframework.data.repository.CrudRepository;
-
-import javax.transaction.Transactional;
 
 /**
  * Created by szlizarrrr on 4/4/16.
