@@ -15,7 +15,7 @@ import org.springframework.transaction.annotation.Transactional;
 @Service
 public class IssueService {
 
-    private static Logger log = LoggerFactory.getLogger(IssueService.class);
+    private final static Logger logger = LoggerFactory.getLogger(IssueService.class);
 
     @Autowired
     private IssueCrudRepository issueCrudRepository;

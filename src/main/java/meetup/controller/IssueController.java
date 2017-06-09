@@ -18,8 +18,6 @@ import javax.annotation.Resource;
 @Controller
 public class IssueController {
 
-    private static Logger log = LoggerFactory.getLogger(IssueController.class);
-
     @Resource
     private IssueService issueService;
 
