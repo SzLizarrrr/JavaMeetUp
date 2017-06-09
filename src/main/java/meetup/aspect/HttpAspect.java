@@ -29,9 +29,9 @@ public class HttpAspect {
         ServletRequestAttributes attributes = (ServletRequestAttributes) RequestContextHolder.getRequestAttributes();
         HttpServletRequest request = attributes.getRequest();
 
-        logger.info("url={}", request.getRequestURL());
-        logger.info("method={}", request.getMethod());
-        logger.info("ip={}", request.getRemoteAddr());
+        logger.info("access_url={}", request.getRequestURL());
+        logger.info("http_method={}", request.getMethod());
+        logger.info("request_ip={}", request.getRemoteAddr());
         logger.info("class_method={} start", joinPoint.getSignature().getDeclaringTypeName() + "." + joinPoint.getSignature().getName());
         logger.info("args={}", joinPoint.getArgs());
     }
