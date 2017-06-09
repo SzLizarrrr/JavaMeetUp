@@ -26,12 +26,14 @@ public class HttpAspect {
 
     @Before("log()")
     public void doBefore(JoinPoint joinPoint) {
+        //these are for http request attribute, the method has been separate as two part, Http part and JoinPoint part.
         ServletRequestAttributes attributes = (ServletRequestAttributes) RequestContextHolder.getRequestAttributes();
         HttpServletRequest request = attributes.getRequest();
 
         logger.info("access_url={}", request.getRequestURL());
         logger.info("http_method={}", request.getMethod());
         logger.info("request_ip={}", request.getRemoteAddr());
+
         logger.info("class_method={} start", joinPoint.getSignature().getDeclaringTypeName() + "." + joinPoint.getSignature().getName());
         logger.info("args={}", joinPoint.getArgs());
     }
