@@ -3,29 +3,29 @@
       lang="en">
 <body>
 
-    <div class="issue-list" th:fragment="issues" th:each="issue : ${issues}">
-        <article class="issue clearfix">
-            <div class="avatar">
-                <a href="/happypeter">
-                    <img src="http://ww4.sinaimg.cn/crop.0.0.852.852.1024/64848c8bjw8ei9vx6j3wzj20no0no424.jpg"/>
-                </a>
-            </div>
-            <div class="body">
-                <h5 class="title">
-                    <a th:href="@{/issue(id=${issue.id})}" th:text="${issue.title}"/>
-                </h5>
-                <a class="read-more" href="#">read</a>
-                <span class="meta-data">
+<div class="issue-list" th:fragment="issues" th:each="issue : ${issues}">
+    <article class="issue clearfix">
+        <div class="avatar">
+            <a href="/happypeter">
+                <img src="http://ww4.sinaimg.cn/crop.0.0.852.852.1024/64848c8bjw8ei9vx6j3wzj20no0no424.jpg"/>
+            </a>
+        </div>
+        <div class="body">
+            <h5 class="title">
+                <a th:href="@{/issue(id=${issue.id})}" th:text="${issue.title}"/>
+            </h5>
+            <a class="read-more" href="#">read</a>
+            <span class="meta-data">
                     <a href="/happypeter">多澄莹</a>
                 </span>
-            </div>
-            <div class="issue-comment-count">
-                <a>
-                    5
-                </a>
-            </div>
-        </article>
-    </div>
+        </div>
+        <div class="issue-comment-count">
+            <a>
+                5
+            </a>
+        </div>
+    </article>
+</div>
 
 </body>
 </html>

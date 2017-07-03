@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html xmlns="http://www.w3.org/1999/xhtml"
-xmlns:th="http://www.thymeleaf.com"
-lang="en">
+      xmlns:th="http://www.thymeleaf.com"
+      lang="en">
 <head>
     <title>MeetUp Home Page</title>
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
@@ -12,31 +12,31 @@ lang="en">
     <script type="text/javascript" src="js/jquery.anystretch.min.js"></script>
 </head>
 <body class="home">
-    <div th:replace="fragments/header :: header"/>
+<div th:replace="fragments/header :: header"/>
 
-    <div class="home-banner" data-stretch="images/route66.jpg">
-        <div class="banner-inner container clearfix">
-            <h1>It's Party Time!</h1>
-            <p class="subheading">到时聚聚，聊聊程序</p>
-            <div class="home-banner-links">
-                <a class="banner-btn" href="/newissue">发布新活动</a>
-            </div>
+<div class="home-banner" data-stretch="images/route66.jpg">
+    <div class="banner-inner container clearfix">
+        <h1>It's Party Time!</h1>
+        <p class="subheading">到时聚聚，聊聊程序</p>
+        <div class="home-banner-links">
+            <a class="banner-btn" href="/newissue">发布新活动</a>
         </div>
     </div>
+</div>
 
-    <div class="issue-list-header">
-        <div class="container clearfix">
-            <h1 class="issue-list-heading">所有活动都在下面了...</h1>
-        </div>
-    </div>
-
+<div class="issue-list-header">
     <div class="container clearfix">
-        <div th:replace="fragments/issues :: issues"/>
+        <h1 class="issue-list-heading">所有活动都在下面了...</h1>
     </div>
+</div>
 
-    <div th:replace="fragments/footer :: footer"/>
-    <script>
-        $('.home-banner').anystretch();
-    </script>
+<div class="container clearfix">
+    <div th:replace="fragments/issues :: issues"/>
+</div>
+
+<div th:replace="fragments/footer :: footer"/>
+<script>
+    $('.home-banner').anystretch();
+</script>
 </body>
 </html>

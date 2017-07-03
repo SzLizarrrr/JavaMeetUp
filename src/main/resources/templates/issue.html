@@ -1,47 +1,47 @@
 <!DOCTYPE html>
 <html xmlns:th="http://www.thymeleaf.com"
-lang="en">
+      lang="en">
 <head>
-  <meta charset="UTF-8"/>
-  <title>meetup</title>
-  <link rel="stylesheet" href="css/common.css"/>
-  <link rel="stylesheet" href="css/layout.css"/>
-  <link rel="stylesheet" href="css/issue.css"/>
-  <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"/>
+    <meta charset="UTF-8"/>
+    <title>meetup</title>
+    <link rel="stylesheet" href="css/common.css"/>
+    <link rel="stylesheet" href="css/layout.css"/>
+    <link rel="stylesheet" href="css/issue.css"/>
+    <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"/>
 </head>
 <body>
-  <div th:replace="fragments/header :: header"/>
-  <div class="issue-heading">
-     <div class="container">
-      <h th:text="${issue.title}"/>
-      <a class="btn btn-primary delete-confirm">Destory</a>
-      <a class="btn btn-primary">Edit</a>
+<div th:replace="fragments/header :: header"/>
+<div class="issue-heading">
+    <div class="container">
+        <h th:text="${issue.title}"/>
+        <a class="btn btn-primary delete-confirm">Destory</a>
+        <a class="btn btn-primary">Edit</a>
     </div>
-  </div>
-  <div class="container">
+</div>
+<div class="container">
     <div class="replies">
-      <article class="reply clearfix">
-        <div class="avatar">
-          <img src="http://ww4.sinaimg.cn/crop.0.0.852.852.1024/64848c8bjw8ei9vx6j3wzj20no0no424.jpg" alt=""
-          class="image-circle"/>
-        </div>
-        <div class="body">
-          <div class="heading">
-            <h5 class="name"><a href="#">多澄莹</a></h5>
-          </div>
-          <div th:text="${issue.content}"/>
-        </div>
-      </article>
+        <article class="reply clearfix">
+            <div class="avatar">
+                <img src="http://ww4.sinaimg.cn/crop.0.0.852.852.1024/64848c8bjw8ei9vx6j3wzj20no0no424.jpg" alt=""
+                     class="image-circle"/>
+            </div>
+            <div class="body">
+                <div class="heading">
+                    <h5 class="name"><a href="#">多澄莹</a></h5>
+                </div>
+                <div th:text="${issue.content}"/>
+            </div>
+        </article>
     </div>
-  </div>
-  <div th:replace="fragments/footer :: footer"/>
+</div>
+<div th:replace="fragments/footer :: footer"/>
 
-  <script th:inline="javascript">
-    $('.delete-confirm').click(function(){
-      if(confirm("Are you sure?")){
-        document.location.href="/destory?id=[[${issue.id}]]";
-      }
+<script th:inline="javascript">
+    $('.delete-confirm').click(function () {
+        if (confirm("Are you sure?")) {
+            document.location.href = "/destory?id=[[${issue.id}]]";
+        }
     })
-  </script>
+</script>
 </body>
 </html>
