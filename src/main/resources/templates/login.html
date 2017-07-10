@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:th="http://www.thymeleaf.org" lang="en">
+
+<head>
+    <title>Spring Security Example </title>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <link rel="stylesheet" href="css/common.css" />
+    <link rel="stylesheet" href="css/layout.css" />
+    <link rel="stylesheet" href="css/user.css" />
+</head>
+
+<body class="login">
+    <div th:replace="fragments/header :: header" />
+
+    <div th:if="${param.error}">
+        Invalid username and password.
+    </div>
+
+    <div class="login-form-container clearfix">
+        <div class="login-form clearfix">
+            <form th:action="@{/login}" method="post">
+                <dl class="form">
+                    <dt><label> User Name : </label></dt>
+                    <dd><input type="text" name="username" /> </dd>
+                </dl>
+                <dl class="form">
+                    <dt><label> Password:  </label></dt>
+                    <dd><input type="password" name="password" /></dd>
+                </dl>
+                <p><input type="submit" class="login-button btn btn-primary" value="Login In" /></p>
+            </form>
+        </div>
+    </div>
+
+    <div th:replace="fragments/footer :: footer" />
+
+</body>
+
+</html>
